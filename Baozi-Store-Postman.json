@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "Baozi Store API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "POST - Criar Cliente",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"EliziaFortaleza5153540\",\n  \"clienteDesde\": \"2026-02-21\"\n}"
+            },
+            "url": "http://localhost:8080/clientes"
+          }
+        },
+        {
+          "name": "GET - Listar Todos Clientes",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/clientes"
+          }
+        },
+        {
+          "name": "GET - Cliente por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/clientes/1"
+          }
+        },
+        {
+          "name": "DELETE - Apagar Cliente",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/clientes/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "POST - Criar Produto",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Baozi Tradicional\",\n  \"preco\": 5.50,\n  \"estoque\": true\n}"
+            },
+            "url": "http://localhost:8080/produtos"
+          }
+        },
+        {
+          "name": "GET - Listar Todos Produtos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/produtos"
+          }
+        },
+        {
+          "name": "GET - Produto por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/produtos/1"
+          }
+        },
+        {
+          "name": "DELETE - Apagar Produto",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/produtos/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "POST - Criar Pedido",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clienteId\": 1,\n  \"produtoId\": 1,\n  \"quantidade\": 3\n}"
+            },
+            "url": "http://localhost:8080/pedidos"
+          }
+        },
+        {
+          "name": "GET - Listar Todos Pedidos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/pedidos"
+          }
+        },
+        {
+          "name": "GET - Pedido por ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/pedidos/1"
+          }
+        },
+        {
+          "name": "DELETE - Apagar Pedido",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/pedidos/1"
+          }
+        }
+      ]
+    }
+  ]
+}
